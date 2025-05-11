@@ -1,0 +1,351 @@
+/* Body Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#main {
+    max-width: 880px;
+    /* Reduced from 1000px */   
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Button Styles */
+button {
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Submit Button Specific Styles */
+button.submit {
+    background-color: #2ecc71;
+    box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
+    transition: all 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+button.submit::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #2ecc71, #27ae60, #2ecc71);
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+button.submit:hover {
+    background-color: #27ae60;
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.4);
+    transform: translateY(-2px);
+    border-color: #2ecc71;
+}
+
+button.submit:hover::after {
+    opacity: 1;
+}
+
+button.submit:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(46, 204, 113, 0.4);
+}
+
+button.edit,
+button.delete {
+    width: 80%;
+    /* Reduced from 90% */
+    margin: 0 auto;
+    padding: 8px 15px;
+    /* Reduced padding */
+    font-size: 14px;
+    /* Reduced font size */
+}
+
+button.edit {
+    background-color: #3498db;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+button.edit:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+    transform: translateY(-2px);
+}
+
+button.delete {
+    background-color: #e74c3c;
+    box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2);
+}
+
+button.delete:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Toggle Button Styles */
+button#themeToggle {
+    background-color: #9b59b6;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: auto;
+    padding: 10px 15px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(155, 89, 182, 0.2);
+}
+
+button#themeToggle:hover {
+    background-color: #8e44ad;
+    box-shadow: 0 6px 12px rgba(155, 89, 182, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#main.dark-mode {
+    background: #2c2c2c;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode label {
+    color: #ffffff;
+}
+
+.dark-mode input[type="number"],
+.dark-mode input[type="text"] {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: #4a4a4a;
+}
+
+.dark-mode input[type="number"]:focus,
+.dark-mode input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.dark-mode table {
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode th {
+    background-color: #2980b9;
+}
+
+.dark-mode tbody tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+.dark-mode tbody tr:hover {
+    background-color: #4a4a4a;
+}
+
+.dark-mode button.submit {
+    background-color: #27ae60;
+    box-shadow: 0 4px 6px rgba(39, 174, 96, 0.3);
+}
+
+.dark-mode button.submit:hover {
+    background-color: #2ecc71;
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.5);
+    border-color: #27ae60;
+}
+
+.dark-mode button.submit::after {
+    background: linear-gradient(45deg, #27ae60, #2ecc71, #27ae60);
+}
+
+.dark-mode button.edit {
+    background-color: #2980b9;
+    box-shadow: 0 4px 6px rgba(41, 128, 185, 0.3);
+}
+
+.dark-mode button.edit:hover {
+    background-color: #3498db;
+    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.5);
+}
+
+.dark-mode button.delete {
+    background-color: #c0392b;
+    box-shadow: 0 4px 6px rgba(192, 57, 43, 0.3);
+}
+
+.dark-mode button.delete:hover {
+    background-color: #e74c3c;
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.5);
+}
+
+.dark-mode button#themeToggle {
+    background-color: #8e44ad;
+    color: #ffffff;
+}
+
+.dark-mode button#themeToggle:hover {
+    background-color: #9b59b6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#main {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #main {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    #main {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

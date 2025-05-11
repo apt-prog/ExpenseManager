@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Title Of The Document -->
+    <title>Expense Handler</title>
+
+    <!-- Css Link -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- main div start -->
+    <div id="main">
+        <h1>Expense Handler</h1>
+
+        <!-- result show -->
+        <h2 id="Total"></h2>
+        <h2 id="Nolist"></h2>
+
+        <!-- input fields -->
+        <label for="Amount">Enter Amount :</label>
+        <input type="number" id="Amount">
+
+        <label for="Label">Expense Name :</label>
+        <input type="text" id="Label">
+
+        <!-- submit button -->
+        <button class="submit" onclick="Send()">Submit</button><br><br>
+
+        <!-- table -->
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Label</th>
+                    <th>Amount</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="TableBody"></tbody>
+        </table>
+
+        <!-- toggle button -->
+        <button id="themeToggle" onclick="toggleTheme()"
+            style="position: absolute; top: 20px; right: 20px;width: 10%;">Dark Theme</button>
+    </div>
+
+    <!-- Javascript link -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
